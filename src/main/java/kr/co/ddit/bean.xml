@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="Dao" class="kr.co.ddit.DaoImpl">
+	<property name="service" ref="service"></property>
+</bean>
+
+<bean id="service" class="kr.co.ddit.ServiceImpl">
+	<constructor-arg ref="client"></constructor-arg>
+	<property name="a">
+	<value>피카츄</value>
+	</property>
+	<property name="b" value="파이리"></property>
+	<property name="c" value="코그모"></property>
+</bean>
+
+<bean id="client" class="kr.co.ddit.MapClient">
+
+</bean>
+
+</beans>
